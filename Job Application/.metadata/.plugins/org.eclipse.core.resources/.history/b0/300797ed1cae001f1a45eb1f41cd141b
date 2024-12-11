@@ -1,0 +1,18 @@
+package com.example.DTOs;
+
+import java.time.LocalDateTime;
+
+import com.example.model.external.Room;
+
+public class UserRoomDTOs {
+	
+	private Long userId; // Primary key, unique identifier for each user
+	private String username; // The username for the user
+	private String email; // The email address of the user
+	private String passwordHash; // Hashed password for the user
+	private String role; // Role of the user (Admin, Customer, Staff)
+	private LocalDateTime createdAt; // Timestamp of when the user was created
+	private LocalDateTime updatedAt; // Timestamp
+	private Room room;
+
+}

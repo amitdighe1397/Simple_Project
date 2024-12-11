@@ -1,0 +1,17 @@
+package com.example.model.external;
+
+import java.time.LocalDateTime;
+
+public class Room {
+
+	private int roomId;
+	private Long userId; // Primary Key
+	private String roomNumber;
+	private String roomType; // e.g., Single, Double, Suite
+	private String roomStatus; // e.g., Available, Booked, Maintenance
+	private double pricePerNight;
+	private String description;
+	private LocalDateTime createdAt;
+	private LocalDateTime updatedAt;
+
+}

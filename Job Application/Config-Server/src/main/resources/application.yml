@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: eureka-server          # Name of the application (visible in the Eureka dashboard)
+
+server:
+  port: 8761                     # Port for the Eureka Server to run on
+
+eureka:
+  client:
+    register-with-eureka: false  # The Eureka server does not register itself
+    fetch-registry: false        # The server does not fetch the registry from other servers
+  server:
+    enable-self-preservation: false # Disable self-preservation mode for testing purposes (use cautiously in production)
+
+# Optional: To make the dashboard accessible at `/eureka`
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+# Logging configuration (optional)
+logging:
+  level:
+    com.netflix.eureka: DEBUG    # Enable debug-level logging for Eureka-specific classes

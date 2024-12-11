@@ -1,0 +1,12 @@
+package com.example.configuration;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+import com.example.model.external.Room;
+
+@FeignClient(name = "ROOM-SERVICE")
+public class AppConfig {
+
+	public Room getRoomById(Long userId);
+
+}

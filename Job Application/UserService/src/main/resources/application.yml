@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/User_service
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver  
+
+  # JPA/Hibernate properties
+  jpa:
+    hibernate:
+      ddl-auto: update        # or 'validate', 'none', 'create', etc.
+      show-sql: true          # Log SQL queries (useful for debugging)
+    properties:
+      hibernate:
+        format_sql: true      # Format SQL queries for better readability
+    database-platform: org.hibernate.dialect.MySQL8Dialect  # Set the correct dialect
+  
+  application:
+    name: USER-SERVICE
+# Server settings (optional, depending on your use case)
+server:
+  port: 8081  # Default Spring Boot port, change if necessary
+  
+  eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # URL of the Eureka Server
+    fetch-registry: true                          # Fetch the registry from the Eureka server
+    register-with-eureka: true                    # Register this application with Eureka server
+  instance:
+    instance-id: ${spring.application.name}:${server.port} # Unique instance ID
+    prefer-ip-address: true                        # Use IP address instead of hostname
+
+# Logging configuration (optional)
+  level:
+    com.netflix.eureka: DEBUG

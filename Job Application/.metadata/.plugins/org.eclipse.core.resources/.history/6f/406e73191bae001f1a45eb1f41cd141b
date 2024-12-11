@@ -1,0 +1,14 @@
+package com.example.configuration;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.example.model.external.Room;
+
+@FeignClient(name = "ROOM-SERVICE")
+public class AppConfig {
+
+	@GetMapping();
+	public Room getRoomById(Long userId);
+
+}

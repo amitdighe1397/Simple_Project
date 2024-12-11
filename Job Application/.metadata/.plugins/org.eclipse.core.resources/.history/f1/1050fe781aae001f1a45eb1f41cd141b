@@ -1,0 +1,8 @@
+package com.example.configuration;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name = "ROOM-SERVICE")
+public class AppConfig {
+
+}

@@ -1,0 +1,13 @@
+package com.example.DTOs;
+
+import com.example.model.User;
+import com.example.model.external.Room;
+
+public class UserRoomDTOs {
+
+	private User user;
+	private Room room;
+
+	
+
+}
