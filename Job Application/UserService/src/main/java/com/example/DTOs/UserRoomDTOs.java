@@ -24,4 +24,9 @@ public class UserRoomDTOs {
 		this.room = room;
 	}
 
+}class Demo {
+
+	public void fun() {
+
+	}
 }

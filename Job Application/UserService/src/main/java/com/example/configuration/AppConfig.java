@@ -13,3 +13,10 @@ public interface AppConfig {
 	public Room getRoomById(@PathVariable Long id);
 
 }
+
+class Demo {
+
+	public void fun() {
+
+	}
+}
